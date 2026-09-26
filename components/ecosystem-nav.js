@@ -9,7 +9,7 @@
 class PressNav extends HTMLElement {
   connectedCallback() {
     const activeSubdomain = this.getAttribute('active') || 'root';
-    const rootDomain = this.getAttribute('domain') || 'yourdomain.com';
+    const rootDomain = this.getAttribute('domain') || 'karamali.org';
 
     const subdomains = [
       { id: 'root', label: 'home', url: `https://${rootDomain}` },
@@ -100,7 +100,7 @@ class PressNav extends HTMLElement {
       <nav class="press-nav-container">
         <a href="https://${rootDomain}" class="press-brand">
           <div class="press-glyph">✸</div>
-          <span class="press-title">Ali // Systems &amp; AI</span>
+          <span class="press-title">Karamali // Systems &amp; AI</span>
           <span style="color: var(--press-text-muted, #b0aea5)">/</span>
           <span class="press-badge">${activeSubdomain}.${rootDomain}</span>
         </a>

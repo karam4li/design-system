@@ -106,9 +106,9 @@ Only three typographic roles exist. Never introduce a fourth font family.
 All subdomains must implement the shared **Ecosystem Anchor Bar** across the top:
 
 ```
-[ ✸ Ali // Systems & AI ]  /  [ models.ali.net ▾ ]         [ research ]  [ db ]  [ api ]  [ ☀️/🌙 ]
+[ ✸ Karamali // Systems & AI ]  /  [ models.karamali.org ▾ ]         [ research ]  [ db ]  [ api ]  [ ☀️/🌙 ]
 ```
 
-* **Left Anchor:** Your persistent personal monogram/symbol (`✸` sunburst or custom glyph) linking directly back to the root apex domain (`https://ali.net`).
+* **Left Anchor:** Your persistent personal monogram/symbol (`✸` sunburst or custom glyph) linking directly back to the root apex domain (`https://karamali.org`).
 * **Subdomain Indicator:** A subtle rounded pill indicating the active subdomain (`models`, `db`, `research`, `cv`, `tools`). Clicking it reveals a dropdown of all running subdomains.
 * **Right Group:** Direct cross-links to sibling subdomains and the universal Light/Dark theme toggle.

@@ -84,18 +84,18 @@ const styles = StyleSheet.create({
 ---
 
 ### 4. Cross-Subdomain Navigation Bar
-Drop this single line into the `<head>` or `<body>` of any subdomain (e.g. `models.ali.net`, `db.ali.net`, `research.ali.net`):
+Drop this single line into the `<head>` or `<body>` of any subdomain (e.g. `models.karamali.org`, `db.karamali.org`, `research.karamali.org`):
 
 ```html
 <script src="/path/to/components/ecosystem-nav.js"></script>
 
 <!-- Render the universal header -->
-<press-nav active="models" domain="ali.net"></press-nav>
+<press-nav active="models" domain="karamali.org"></press-nav>
 ```
 
 This automatically provides:
-- The persistent brand glyph (`✸`) linking back to the root apex domain.
-- The active subdomain chip indicator (`models.ali.net`).
+- The persistent brand glyph (`✸`) linking back to the root apex domain (`karamali.org`).
+- The active subdomain chip indicator (`models.karamali.org`).
 - Direct navigation links to sister subdomains (`research`, `database`, `benchmarks`).
 - A persistent light/dark mode theme switcher.
 
