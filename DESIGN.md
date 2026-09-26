@@ -19,8 +19,8 @@ Most tech companies design interfaces like futuristic video games or glowing das
 2. **The Printed Essay Stance:**
    Long-form reading is prioritized. Prose uses open line-heights ($1.65–1.75$), wide reading margins, and distinguished literary serif typography. It signals contemplative, high-rigor engineering rather than hasty prototyping.
 
-3. **Earth Accents, Never Neon:**
-   The primary visual anchor is **Clay Terracotta (`#d97757`)**. Secondary accents are derived from natural pigments: **Sage Green (`#788c5d`)** for nominal states and **Slate Blue (`#6a9bcc`)** for structural metadata. Bright neon pinks, cyans, and purples are forbidden.
+3. **Sky Blue Accents, Never Neon:**
+   The primary visual anchor is **Sky Blue (`#0284c7` / `#38bdf8`)**. Secondary accents are derived from natural pigments: **Sage Green (`#788c5d`)** for nominal states and **Slate Blue (`#6a9bcc`)** for structural metadata. Bright neon pinks, cyans, and purples are forbidden.
 
 4. **Universal Cross-Subdomain Continuity:**
    Every app on every subdomain (`models.*`, `db.*`, `notes.*`, `tools.*`) shares the same **Ecosystem Anchor Bar**, the same **2-Family Typography Standard**, and identical border-radius rhythm. Users immediately know they are inside your unified personal laboratory.
@@ -43,9 +43,9 @@ Most tech companies design interfaces like futuristic video games or glowing das
 #### Accents
 | Token Name | Hex Code | Role & Usage |
 |---|---|---|
-| `accent-clay` | `#d97757` | **Primary Brand Signature.** Interactive buttons, active tabs, primary callouts, logo mark. |
-| `accent-clay-hover` | `#c26547` | Hover & pressed states for primary buttons and links. |
-| `accent-clay-subtle` | `rgba(217, 119, 87, 0.12)` | Subtle badges, tag backgrounds, focused outline rings. |
+| `accent-sky` | `#0284c7` | **Primary Brand Signature.** Interactive buttons, active tabs, primary callouts, logo mark. (Night: `#38bdf8`) |
+| `accent-sky-hover` | `#0369a1` | Hover & pressed states for primary buttons and links. (Night: `#7dd3fc`) |
+| `accent-sky-subtle` | `rgba(2, 132, 199, 0.12)` | Subtle badges, tag backgrounds, focused outline rings. |
 | `accent-sage` | `#788c5d` | Success signals, healthy cluster nodes, converged loss metrics, 200 OK. |
 | `accent-blue` | `#6a9bcc` | Informational links, secondary chips, vector dimension tags. |
 | `accent-amber` | `#d4973b` | Warning states, high VRAM usage, cache invalidation alerts. |

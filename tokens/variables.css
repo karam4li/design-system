@@ -19,10 +19,13 @@
   --press-border: #e8e6dc;
   --press-border-subtle: #f2efe6;
 
-  /* Accents */
-  --press-clay: #d97757;
-  --press-clay-hover: #c26547;
-  --press-clay-subtle: rgba(217, 119, 87, 0.12);
+  /* Primary Accent: Sky Blue */
+  --press-primary: #0284c7;
+  --press-primary-hover: #0369a1;
+  --press-primary-subtle: rgba(2, 132, 199, 0.12);
+  --press-sky: #0284c7;
+  --press-sky-hover: #0369a1;
+  --press-sky-subtle: rgba(2, 132, 199, 0.12);
   --press-sage: #788c5d;
   --press-blue: #6a9bcc;
   --press-amber: #d4973b;
@@ -59,9 +62,13 @@
   --press-border: #2e2d2a;
   --press-border-subtle: #242320;
 
-  --press-clay: #d97757;
-  --press-clay-hover: #e58869;
-  --press-clay-subtle: rgba(217, 119, 87, 0.18);
+  /* Primary Accent: Sky Blue (Night Luminous) */
+  --press-primary: #38bdf8;
+  --press-primary-hover: #7dd3fc;
+  --press-primary-subtle: rgba(56, 189, 248, 0.18);
+  --press-sky: #38bdf8;
+  --press-sky-hover: #7dd3fc;
+  --press-sky-subtle: rgba(56, 189, 248, 0.18);
   --press-sage: #8da46e;
   --press-blue: #7ba8d6;
   --press-amber: #e0a648;

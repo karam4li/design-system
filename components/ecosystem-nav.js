@@ -48,7 +48,7 @@ class PressNav extends HTMLElement {
           width: 1.5rem;
           height: 1.5rem;
           border-radius: 4px;
-          background: var(--press-clay, #d97757);
+          background: var(--press-primary, var(--press-sky, #0284c7));
           color: #ffffff;
           display: flex;
           align-items: center;

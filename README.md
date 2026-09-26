@@ -37,7 +37,7 @@ module.exports = {
 ```
 
 Now you have instant access to:
-* Colors: `bg-press-ivory`, `text-press-slate`, `bg-press-clay`, `border-press-border-light`, `text-press-sage`, etc.
+* Colors: `bg-press-ivory`, `text-press-slate`, `bg-press-sky`, `border-press-border-light`, `text-press-sage`, etc.
 * Fonts: `font-serif` (Newsreader/Tiempos), `font-sans` (Inter), `font-mono` (JetBrains Mono).
 * Radii: `rounded-press-md`, `rounded-press-xl`.
 
@@ -51,7 +51,7 @@ Simply import the stylesheet:
 ```
 
 All standard semantic CSS variables will be available:
-`var(--press-bg)`, `var(--press-text-primary)`, `var(--press-clay)`, `var(--press-border)`.
+`var(--press-bg)`, `var(--press-text-primary)`, `var(--press-sky)`, `var(--press-border)`.
 
 To enable dark mode, add `.dark` or `data-theme="dark"` to the `<html>` or `<body>` element.
 
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     borderRadius: PressRadii.lg,
   },
   actionButton: {
-    backgroundColor: PressColors.light.clay,
+    backgroundColor: PressColors.light.sky,
   }
 });
 ```

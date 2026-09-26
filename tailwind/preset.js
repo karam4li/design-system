@@ -20,10 +20,17 @@ module.exports = {
           slate: '#141413',
           'slate-alt': '#1c1b19',
           'slate-subtle': '#2b2a26',
-          clay: {
-            DEFAULT: '#d97757',
-            hover: '#c26547',
-            subtle: 'rgba(217, 119, 87, 0.12)',
+          sky: {
+            DEFAULT: '#0284c7',
+            light: '#38bdf8',
+            hover: '#0369a1',
+            subtle: 'rgba(2, 132, 199, 0.12)',
+          },
+          primary: {
+            DEFAULT: '#0284c7',
+            light: '#38bdf8',
+            hover: '#0369a1',
+            subtle: 'rgba(2, 132, 199, 0.12)',
           },
           sage: '#788c5d',
           blue: '#6a9bcc',
