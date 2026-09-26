@@ -9,6 +9,12 @@ design-system/
 ├── DESIGN.md                 # Core manifesto, philosophy, and detailed token specs
 ├── package.json              # NPM package definition (@ali/design-system)
 ├── index.html                # Interactive Living Style Guide & Kitchen Sink
+├── examples/                 # Real-World Product Implementations
+│   ├── index.html            # Master interactive gallery previewing all 4 examples
+│   ├── blog.html             # 1. Long-form research blog & publication
+│   ├── resume.html           # 2. Print-friendly academic / systems CV
+│   ├── crud.html             # 3. Model checkpoint registry (Full CRUD)
+│   └── mobile-app.html       # 4. Mobile app prototype (Culinary recipe store)
 ├── tokens/
 │   ├── tokens.json           # Canonical W3C Design Tokens format
 │   ├── variables.css         # CSS Custom Properties (Light & Dark theme variables)
