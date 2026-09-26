@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DentalOS Foundational AI & EMPI — Research Monograph & Evaluation</title>
+  <link rel="stylesheet" href="../tokens/variables.css">
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <script src="../components/ecosystem-nav.js"></script>
+  <style>
+    body {
+      background-color: var(--press-bg);
+      color: var(--press-text-primary);
+      font-family: var(--press-font-sans);
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .font-serif-press { font-family: var(--press-font-serif); }
+    .font-mono-press { font-family: var(--press-font-mono); }
+    .press-reading-column {
+      max-width: 44rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+
+  <!-- Anthropic Ink-Bleed SVG Filter Definition -->
+  <svg class="press-filters" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+    <defs>
+      <filter id="press-ink-bleed" x="-4%" y="-15%" width="108%" height="130%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="0.6" xChannelSelector="R" yChannelSelector="G" result="rough" />
+        <feGaussianBlur in="rough" stdDeviation="0.7" result="soft" />
+        <feComponentTransfer in="soft" result="ink"><feFuncA type="linear" slope="1.14" intercept="0" /></feComponentTransfer>
+        <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="12" result="s" />
+        <feColorMatrix in="s" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -8 0 0 0 6.6" result="holes" />
+        <feComposite in="ink" in2="holes" operator="in" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Universal Ecosystem Navbar with Announcement Banner -->
+  <press-nav active="models" domain="karamali.org" banner="DentalOS AI Layer v2.4 Architecture Monograph Released →" banner-url="#benchmarks"></press-nav>
+
+  <article class="max-w-5xl mx-auto px-6 py-12 md:py-20 space-y-16">
+
+    <!-- 1. Hero Section (Anthropic Opus 5.5 Layout) -->
+    <header class="press-reading-column space-y-6 text-center md:text-left">
+      <div class="inline-flex items-center gap-2 text-xs font-mono-press uppercase tracking-wider text-[var(--press-clay)] font-semibold">
+        <span>Systems Monograph</span>
+        <span>•</span>
+        <span>September 2026</span>
+        <span>•</span>
+        <span>Foundational Release</span>
+      </div>
+
+      <!-- Heading with Authentic Ink-Bleed Filter -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif-press font-normal tracking-tight text-[var(--press-text-primary)] leading-[1.08] press-ink-bleed">
+        Introducing DentalOS AI &amp; Enterprise Master Patient Index
+      </h1>
+
+      <p class="font-serif-press text-xl md:text-2xl text-[var(--press-text-secondary)] leading-relaxed italic">
+        A deterministic, high-throughput identity resolution and vector retrieval architecture solving multi-practice patient fragmentation across enterprise healthcare clusters.
+      </p>
+
+      <div class="pt-2 flex flex-wrap items-center gap-3">
+        <a href="#benchmarks" class="inline-flex items-center gap-2 bg-[var(--press-clay)] hover:bg-[var(--press-clay-hover)] text-white text-xs font-medium px-4 py-2.5 rounded-lg transition shadow-xs">
+          <span>Inspect Evaluation Matrix ↓</span>
+        </a>
+        <a href="https://github.com/karam4li" target="_blank" class="inline-flex items-center gap-2 bg-transparent hover:bg-[var(--press-bg-subtle)] border border-[var(--press-border)] text-xs font-medium px-4 py-2.5 rounded-lg transition">
+          <span>View Architecture Repository</span>
+          <svg viewBox="0 0 12 13" fill="none" class="w-2.5 h-2.5"><path d="M5.6 0.9C5.8 0.9 6 1.1 6 1.3V1.7H1.6C1.4 1.7 1.2 1.9 1.2 2.1V10.9C1.2 11.1 1.4 11.3 1.6 11.3H10.4C10.6 11.3 10.8 11.1 10.8 10.9V6.9C10.8 6.7 11 6.5 11.2 6.5C11.4 6.5 11.6 6.7 11.6 6.9V10.9C11.6 11.6 11.1 12.1 10.4 12.1H1.6C0.9 12.1 0.4 11.6 0.4 10.9V2.1C0.4 1.4 0.9 0.9 1.6 0.9H5.6ZM11.2 0.9C11.3 0.9 11.4 0.9 11.5 1L11.5 1.1C11.6 1.2 11.6 1.2 11.6 1.3V4.5C11.6 4.7 11.4 4.9 11.2 4.9C11 4.9 10.8 4.7 10.8 4.5V2.3L7.5 5.6C7.3 5.7 7.1 5.7 6.9 5.6C6.8 5.4 6.8 5.2 6.9 5L10.2 1.7H8C7.8 1.7 7.6 1.5 7.6 1.3C7.6 1.1 7.8 0.9 8 0.9H11.2Z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- Reading Column Narrative -->
+    <section class="press-reading-column space-y-5 font-serif-press text-lg text-[var(--press-text-secondary)] leading-relaxed">
+      <p>
+        In modern multi-practice management organizations (DSOs), patient records exist in silos. Duplicated demographics, inconsistent naming conventions, and mismatched clinical IDs degrade cross-facility care coordination and break downstream billing operations.
+      </p>
+      <p>
+        DentalOS EMPI addresses this fundamental challenge. By fusing probabilistic record linkage (Fellegi-Sunter methodology) with 1,536-dimensional clinical dense embeddings indexed over HNSW graphs, the system resolves master records with deterministic certainty at millisecond latency budgets.
+      </p>
+    </section>
+
+    <!-- 2. The BenchmarkGrid Evaluation Table (Peach Theme) -->
+    <section id="benchmarks" class="space-y-6 pt-6">
+      <div class="press-reading-column">
+        <h2 class="text-2xl md:text-3xl font-serif-press font-medium text-[var(--press-text-primary)]">
+          Performance and Scalability Benchmarks
+        </h2>
+        <p class="font-serif-press text-sm text-[var(--press-text-secondary)] mt-1">
+          Empirical evaluation across a synthetic 10,000,000 patient cohort with simulated typographical drift, transposition errors, and partial identifier loss.
+        </p>
+      </div>
+
+      <figure class="press-benchmark-figure">
+        <div class="press-benchmark-wrap">
+          <table class="press-benchmark-table">
+            <thead>
+              <tr>
+                <th scope="col" class="press-benchmark-label-cell" style="background-color: var(--press-bg-subtle);">EVALUATION SUITE</th>
+                <th scope="col" class="press-benchmark-subject">DentalOS EMPI v2.4</th>
+                <th scope="col">Legacy Rule Engine</th>
+                <th scope="col">Elasticsearch Fuzzy</th>
+                <th scope="col">Standard Fellegi-Sunter</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Row 1 -->
+              <tr>
+                <th scope="row" class="press-benchmark-label-cell">
+                  <span class="press-benchmark-category">Identity Resolution</span>
+                  <span class="press-benchmark-name">F1 Precision-Recall Score¹</span>
+                </th>
+                <td class="press-benchmark-win">
+                  <span class="press-benchmark-value">99.4%</span>
+                  <span class="press-benchmark-qualifier">hybrid vector + rules</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">84.2%</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">89.1%</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">93.5%</span>
+                </td>
+              </tr>
+
+              <!-- Row 2 -->
+              <tr>
+                <th scope="row" class="press-benchmark-label-cell">
+                  <span class="press-benchmark-category">Query Throughput</span>
+                  <span class="press-benchmark-name">P99 Resolution Latency</span>
+                </th>
+                <td class="press-benchmark-win">
+                  <span class="press-benchmark-value">4.2 ms</span>
+                  <span class="press-benchmark-qualifier">HNSW pgvector shard</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">38.5 ms</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">22.1 ms</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">44.0 ms</span>
+                </td>
+              </tr>
+
+              <!-- Row 3 -->
+              <tr>
+                <th scope="row" class="press-benchmark-label-cell">
+                  <span class="press-benchmark-category">Noise Robustness</span>
+                  <span class="press-benchmark-name">Transposition &amp; Typos</span>
+                </th>
+                <td class="press-benchmark-win">
+                  <span class="press-benchmark-value">98.8%</span>
+                  <span class="press-benchmark-qualifier">Jaro-Winkler + Embeddings</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">61.0%</span>
+                </td>
+                <td class="press-benchmark-rival">
+                  <span class="press-benchmark-value">91.4%</span>
+                  <span class="press-benchmark-qualifier">Levenshtein edit-dist 2</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">88.2%</span>
+                </td>
+              </tr>
+
+              <!-- Row 4 -->
+              <tr>
+                <th scope="row" class="press-benchmark-label-cell">
+                  <span class="press-benchmark-category">Storage Footprint</span>
+                  <span class="press-benchmark-name">10M Graph Index VRAM</span>
+                </th>
+                <td class="press-benchmark-win">
+                  <span class="press-benchmark-value">2.4 GB</span>
+                  <span class="press-benchmark-qualifier">PQ compressed scalar</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">8.1 GB</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">14.6 GB</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">6.8 GB</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figcaption class="press-chart-note">
+          <p>
+            Unless otherwise noted, all evaluations were run against a cluster of 4 sharded nodes utilizing 8 vCPUs each, running PostgreSQL 16 with pgvector 0.7.0 and Product Quantization (PQ) enabled.
+          </p>
+          <p>
+            <sup>1</sup><strong>F1 Precision-Recall Score:</strong> Evaluated against a manually verified gold set of 50,000 patient admission pairs containing deliberate name reversals, maiden name variations, and telephone number permutations.
+          </p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- 3. Interactive Comparison Component (Prompt/Response & Code Diff) -->
+    <section class="space-y-6 pt-6">
+      <div class="press-reading-column">
+        <h2 class="text-2xl md:text-3xl font-serif-press font-medium text-[var(--press-text-primary)]">
+          Deterministic Linkage in Action
+        </h2>
+        <p class="font-serif-press text-sm text-[var(--press-text-secondary)] mt-1">
+          Observe how the hybrid resolution pipeline parses ambiguous incoming EHR telemetry compared to legacy fuzzy search.
+        </p>
+      </div>
+
+      <div class="press-comparison-grid">
+        <!-- Side A: Legacy Baseline -->
+        <div class="press-comparison-card">
+          <div class="press-comparison-header">
+            <span class="font-mono-press text-xs font-semibold text-[var(--press-text-secondary)]">LEGACY MATCH ENGINE</span>
+            <span class="text-xs font-mono-press text-[var(--press-crimson)]">MISS / FALSE SPLIT</span>
+          </div>
+          <div class="space-y-2 text-xs font-serif-press text-[var(--press-text-secondary)]">
+            <p><strong>Incoming Payload:</strong></p>
+            <div class="p-2.5 rounded bg-[var(--press-bg-subtle)] font-mono-press text-[11px] text-[var(--press-text-primary)]">
+              { name: "Johnathan M. Smyth", dob: "1984-11-04", phone: "555-0199" }
+            </div>
+            <p><strong>Result:</strong></p>
+            <p class="text-[var(--press-crimson)]">
+              Created duplicate master ID <code>PID-889124</code>. Failed to match existing record <code>"John Smyth"</code> due to strict first-name token discrepancy and middle initial absence.
+            </p>
+          </div>
+        </div>
+
+        <!-- Side B: DentalOS EMPI v2.4 -->
+        <div class="press-comparison-card border-[var(--press-clay)]">
+          <div class="press-comparison-header">
+            <span class="font-mono-press text-xs font-semibold text-[var(--press-clay)]">DENTALOS EMPI v2.4</span>
+            <span class="press-tok-badge">4.2ms / MATCH 0.984</span>
+          </div>
+          <div class="space-y-2 text-xs font-serif-press text-[var(--press-text-secondary)]">
+            <p><strong>Incoming Payload:</strong></p>
+            <div class="p-2.5 rounded bg-[var(--press-bg-subtle)] font-mono-press text-[11px] text-[var(--press-text-primary)]">
+              { name: "Johnathan M. Smyth", dob: "1984-11-04", phone: "555-0199" }
+            </div>
+            <p><strong>Result:</strong></p>
+            <p class="text-[var(--press-olive)] font-medium">
+              Resolved to canonical Master Patient Record <code>MPI-104928</code>. Nickname alias embedding matched <code>"Johnathan" ↔ "John"</code> ($cos=0.962$) combined with deterministic DOB + telephone concordances.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Anthropic Peach Testimonial Card -->
+    <section class="press-reading-column pt-6">
+      <article class="press-card-peach">
+        <blockquote>
+          “The transition from fragmented practice databases to a unified DentalOS AI layer reduced our cross-clinic patient duplication rate from 14.8% to under 0.2%. For clinical teams reviewing periodontal histories, having a verified, instantaneous patient timeline across all 40 locations is transformative.”
+        </blockquote>
+        <div class="press-card-peach-split">
+          <div>
+            <div class="font-bold text-xs uppercase tracking-wider opacity-75 font-mono-press">Organization</div>
+            <div class="font-semibold text-sm">PlanetDDS Partner Engineering</div>
+          </div>
+          <div class="text-right">
+            <div class="font-bold text-xs uppercase tracking-wider opacity-75 font-mono-press">Architecture Lead</div>
+            <div class="font-semibold text-sm">Mohammed Ali, AI Software Engineer II</div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 5. Pre-footer CTA -->
+    <footer class="press-reading-column pt-8 border-t border-[var(--press-border)] flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <div class="font-serif-press font-semibold text-lg">Interested in the architectural monograph?</div>
+        <div class="text-xs font-serif-press text-[var(--press-text-secondary)]">Read the full whitepaper or test the local API harness.</div>
+      </div>
+      <a href="mailto:ali207715@gmail.com" class="bg-[var(--press-clay)] hover:bg-[var(--press-clay-hover)] text-white text-xs font-medium px-4 py-2.5 rounded-lg transition shadow-xs shrink-0">
+        Contact Systems Architect →
+      </a>
+    </footer>
+
+  </article>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Quiet Press — Living Style Guide</title>
+  <title>The Quiet Press — Living Style Guide & Anthropic Navigation Spec</title>
   <link rel="stylesheet" href="./tokens/variables.css">
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,23 +28,38 @@
 </head>
 <body class="min-h-screen antialiased">
 
-  <!-- Universal Navigation Component Demonstration -->
-  <press-nav active="design" domain="karamali.org"></press-nav>
+  <!-- Anthropic Ink-Bleed SVG Filter Definition -->
+  <svg class="press-filters" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+    <defs>
+      <filter id="press-ink-bleed" x="-4%" y="-15%" width="108%" height="130%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="0.6" xChannelSelector="R" yChannelSelector="G" result="rough" />
+        <feGaussianBlur in="rough" stdDeviation="0.7" result="soft" />
+        <feComponentTransfer in="soft" result="ink"><feFuncA type="linear" slope="1.14" intercept="0" /></feComponentTransfer>
+        <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="12" result="s" />
+        <feColorMatrix in="s" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -8 0 0 0 6.6" result="holes" />
+        <feComposite in="ink" in2="holes" operator="in" />
+      </filter>
+    </defs>
+  </svg>
 
-  <main class="max-w-4xl mx-auto p-6 md:p-12 space-y-12">
+  <!-- Anthropic-Inspired Universal Navigation Component Demonstration -->
+  <press-nav active="design" domain="karamali.org" banner="KTP Radar v2.0 Live — UK Global Talent Visa AI Screener & Innovation Intelligence"></press-nav>
+
+  <main class="max-w-5xl mx-auto p-6 md:p-12 space-y-14">
     
     <!-- Hero / Intro -->
     <header class="space-y-3 pb-8 border-b border-[var(--press-border)]">
       <div class="inline-flex items-center gap-2 text-xs font-mono-press uppercase tracking-wider text-[var(--press-primary)] font-semibold">
-        <span>Component Specification</span>
+        <span>Component Specification &amp; Swatch Matrix</span>
         <span>•</span>
-        <span>Version 1.0.0</span>
+        <span>Version 1.3.0 (Opus 5.5 Aligned)</span>
       </div>
-      <h1 class="text-4xl md:text-5xl font-serif-press font-semibold tracking-tight">
+      <h1 class="text-4xl md:text-5xl font-serif-press font-semibold tracking-tight press-ink-bleed">
         The Quiet Press Design System
       </h1>
-      <p class="font-serif-press italic text-xl text-[var(--press-text-secondary)] leading-relaxed">
-        A calm, literary design system crafted for data scientists, backend architects, and machine learning researchers.
+      <p class="font-serif-press italic text-xl text-[var(--press-text-secondary)] leading-relaxed max-w-3xl">
+        A calm, literary design system crafted for systems architects, AI engineers, and researchers. Infused with Anthropic's computational editorial aesthetic, natural mineral pigments, and production navigation architecture.
       </p>
     </header>
 
@@ -52,47 +67,196 @@
     <div class="press-card p-5 bg-[var(--press-bg-subtle)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
       <div>
         <div class="text-xs font-mono-press uppercase tracking-wider text-[var(--press-primary)] font-semibold">Live Product Gallery</div>
-        <div class="font-serif-press font-semibold text-lg text-[var(--press-text-primary)]">Explore 4 Real-World Implementations</div>
-        <div class="text-xs font-serif-press text-[var(--press-text-secondary)]">Interactive templates for Blogs, CVs, Model Registries (CRUD), and Mobile Apps.</div>
+        <div class="font-serif-press font-semibold text-lg text-[var(--press-text-primary)]">Explore 5 Real-World Implementations</div>
+        <div class="text-xs font-serif-press text-[var(--press-text-secondary)]">Interactive templates for Blogs, CVs, Model Registries (CRUD), Mobile Apps, and Opus 5.5 Release Monograph.</div>
       </div>
-      <a href="./examples/index.html" class="inline-flex items-center gap-1.5 bg-[var(--press-primary)] hover:bg-[var(--press-primary-hover)] text-white text-xs font-medium px-4 py-2.5 rounded-lg transition shrink-0 shadow-xs">
+      <a href="./examples/index.html" class="inline-flex items-center gap-1.5 bg-[var(--press-clay)] hover:bg-[var(--press-clay-hover)] text-white text-xs font-medium px-4 py-2.5 rounded-lg transition shrink-0 shadow-xs">
         <span>Launch Examples Gallery →</span>
       </a>
     </div>
 
-    <!-- Section 1: Color Swatches -->
+    <!-- Section 0: Anthropic Navbar Architecture Highlights -->
     <section class="space-y-4">
-      <h2 class="text-xl font-serif-press font-semibold">01. Foundational Palettes</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3 text-xs font-mono-press">
-        <div class="p-3 press-card">
-          <div class="w-full h-8 rounded bg-[#faf9f5] border border-[#e8e6dc] mb-2"></div>
-          <div class="font-bold">Ivory Cream</div>
-          <div class="text-[var(--press-text-secondary)] text-[10px]">#faf9f5</div>
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-serif-press font-semibold">00. Anthropic Navigation Architecture</h2>
+        <span class="text-xs font-mono-press text-[var(--press-text-secondary)]">&lt;press-nav&gt; Web Component</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-sans text-xs">
+        <div class="press-card p-4 space-y-2">
+          <div class="font-mono-press font-bold text-[var(--press-olive)] uppercase tracking-wider text-[11px]">01. 44px Top Announcement Banner</div>
+          <p class="text-[var(--press-text-secondary)] leading-relaxed">
+            Dismissible top notification bar matching Anthropic's <code>--nav--banner-height: 2.75rem</code>. Persists dismissal state across sessions.
+          </p>
         </div>
-        <div class="p-3 press-card">
-          <div class="w-full h-8 rounded bg-[#141413] mb-2"></div>
-          <div class="font-bold">Slate Ink</div>
-          <div class="text-[var(--press-text-secondary)] text-[10px]">#141413</div>
+        <div class="press-card p-4 space-y-2">
+          <div class="font-mono-press font-bold text-[var(--press-clay)] uppercase tracking-wider text-[11px]">02. Split Combo CTA Button</div>
+          <p class="text-[var(--press-text-secondary)] leading-relaxed">
+            Dual-action button with a primary action link on the left and a dropdown caret on the right revealing quick navigation shortcuts.
+          </p>
         </div>
-        <div class="p-3 press-card">
-          <div class="w-full h-8 rounded bg-[#0284c7] mb-2"></div>
-          <div class="font-bold">Sky Blue (Brand)</div>
-          <div class="text-[var(--press-text-secondary)] text-[10px]">#0284c7</div>
+        <div class="press-card p-4 space-y-2">
+          <div class="font-mono-press font-bold text-[var(--press-sky)] uppercase tracking-wider text-[11px]">03. Categorised Dropdowns &amp; Hamburger</div>
+          <p class="text-[var(--press-text-secondary)] leading-relaxed">
+            Multi-column editorial menus with 180° caret animations, external linkout icons, and Anthropic's signature asymmetrical 3-line hamburger.
+          </p>
         </div>
-        <div class="p-3 press-card">
-          <div class="w-full h-8 rounded bg-[#788c5d] mb-2"></div>
-          <div class="font-bold">Sage Green</div>
-          <div class="text-[var(--press-text-secondary)] text-[10px]">#788c5d</div>
+      </div>
+    </section>
+
+    <!-- Section 1: Complete Anthropic Swatch Matrix -->
+    <section class="space-y-6">
+      <div>
+        <h2 class="text-xl font-serif-press font-semibold">01. Authentic Anthropic Swatch Matrix</h2>
+        <p class="text-xs text-[var(--press-text-secondary)] font-serif-press italic">
+          Extracted directly from Anthropic's design token architecture, organized into tonal families.
+        </p>
+      </div>
+
+      <!-- Family A: Warm Earthy Pigments -->
+      <div class="space-y-2">
+        <div class="text-xs font-mono-press uppercase tracking-wider text-[var(--press-text-muted)] font-semibold">A. Warm Earthy Pigments (Terracotta, Ochre &amp; Craft Paper)</div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-xs font-mono-press">
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#d97757] mb-2 shadow-xs"></div>
+            <div class="font-bold">Clay (Brand CTA)</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#d97757</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#c6613f] mb-2 shadow-xs"></div>
+            <div class="font-bold">Accent (Hover)</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#c6613f</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#ebc9b7] mb-2 border border-[#e8e6dc]"></div>
+            <div class="font-bold">Peach</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#ebc9b7</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#d4a27f] mb-2 shadow-xs"></div>
+            <div class="font-bold">Kraft</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#d4a27f</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#ebdbbc] mb-2 border border-[#e8e6dc]"></div>
+            <div class="font-bold">Manilla</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#ebdbbc</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#e3dacc] mb-2 border border-[#e8e6dc]"></div>
+            <div class="font-bold">Oat</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#e3dacc</div>
+          </div>
         </div>
-        <div class="p-3 press-card">
-          <div class="w-full h-8 rounded bg-[#6a9bcc] mb-2"></div>
-          <div class="font-bold">Slate Blue</div>
-          <div class="text-[var(--press-text-secondary)] text-[10px]">#6a9bcc</div>
+      </div>
+
+      <!-- Family B: Cool & Natural Minerals -->
+      <div class="space-y-2">
+        <div class="text-xs font-mono-press uppercase tracking-wider text-[var(--press-text-muted)] font-semibold">B. Cool &amp; Natural Minerals (Botanical &amp; Slate)</div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-xs font-mono-press">
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#788c5d] mb-2 shadow-xs"></div>
+            <div class="font-bold">Olive (Banner)</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#788c5d</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#0284c7] mb-2 shadow-xs"></div>
+            <div class="font-bold">Sky (Signature)</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#0284c7</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#6a9bcc] mb-2 shadow-xs"></div>
+            <div class="font-bold">Slate Blue</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#6a9bcc</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#bcd1ca] mb-2 border border-[#e8e6dc]"></div>
+            <div class="font-bold">Cactus</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#bcd1ca</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#ced6bf] mb-2 border border-[#e8e6dc]"></div>
+            <div class="font-bold">Matcha</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#ced6bf</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#629987] mb-2 shadow-xs"></div>
+            <div class="font-bold">Mineral</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#629987</div>
+          </div>
         </div>
-        <div class="p-3 press-card">
-          <div class="w-full h-8 rounded bg-[#d4973b] mb-2"></div>
-          <div class="font-bold">Amber Warning</div>
-          <div class="text-[var(--press-text-secondary)] text-[10px]">#d4973b</div>
+      </div>
+
+      <!-- Family C: Vibrants & Editorial Accents -->
+      <div class="space-y-2">
+        <div class="text-xs font-mono-press uppercase tracking-wider text-[var(--press-text-muted)] font-semibold">C. Vibrants &amp; Editorial Accents</div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-xs font-mono-press">
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#f0ac54] mb-2 shadow-xs"></div>
+            <div class="font-bold">Pencil</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#f0ac54</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#de6262] mb-2 shadow-xs"></div>
+            <div class="font-bold">Poppy (Alert)</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#de6262</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#c46686] mb-2 shadow-xs"></div>
+            <div class="font-bold">Fig</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#c46686</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#827dbd] mb-2 shadow-xs"></div>
+            <div class="font-bold">Plum</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#827dbd</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#e5cada] mb-2 border border-[#e8e6dc]"></div>
+            <div class="font-bold">Orchid</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#e5cada</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#ebcece] mb-2 border border-[#e8e6dc]"></div>
+            <div class="font-bold">Coral</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#ebcece</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Family D: Foundational Canvas & Ink -->
+      <div class="space-y-2">
+        <div class="text-xs font-mono-press uppercase tracking-wider text-[var(--press-text-muted)] font-semibold">D. Foundational Canvas &amp; Ink</div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-xs font-mono-press">
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#faf9f5] border border-[#e8e6dc] mb-2"></div>
+            <div class="font-bold">Ivory Light</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#faf9f5</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#f0eee6] border border-[#e8e6dc] mb-2"></div>
+            <div class="font-bold">Ivory Medium</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#f0eee6</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#e8e6dc] mb-2"></div>
+            <div class="font-bold">Ivory Dark (Border)</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#e8e6dc</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#141413] mb-2"></div>
+            <div class="font-bold">Slate Dark (Ink)</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#141413</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#3d3d3a] mb-2"></div>
+            <div class="font-bold">Slate Medium</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#3d3d3a</div>
+          </div>
+          <div class="p-3 press-card">
+            <div class="w-full h-9 rounded bg-[#5e5d59] mb-2"></div>
+            <div class="font-bold">Slate Light</div>
+            <div class="text-[var(--press-text-secondary)] text-[10px]">#5e5d59</div>
+          </div>
         </div>
       </div>
     </section>
@@ -104,8 +268,8 @@
         <h3 class="text-2xl font-serif-press font-normal">
           Section Header in Newsreader / Tiempos Serif
         </h3>
-        <p class="font-serif-press text-lg leading-relaxed text-[var(--press-text-secondary)] max-w-2xl">
-          Body copy adheres to a strict 1.7 line-height budget. Notice the calm contrast against the background surface. Quotations and marginalia are set with subtle left borders rather than floating bubbles.
+        <p class="font-serif-press text-lg leading-relaxed text-[var(--press-text-secondary)] max-w-3xl">
+          Prose copy adheres to a strict 1.7 line-height budget. Notice the calm contrast against the background surface. Quotations and marginalia are set with subtle left borders rather than floating bubbles.
         </p>
         <div class="border-l-2 border-[var(--press-primary)] pl-4 py-1 italic font-serif-press text-[var(--press-text-primary)]">
           "The greatest value of a picture is when it forces us to notice what we never expected to see." — John Tukey
@@ -119,7 +283,7 @@
       <div class="press-card p-6 space-y-4">
         <div class="flex justify-between items-center text-xs font-mono-press pb-3 border-b border-[var(--press-border)]">
           <span class="font-bold">CLUSTER REPLICA TELEMETRY</span>
-          <span class="text-[#788c5d]">● PGVECTOR SHARD 04 (ONLINE)</span>
+          <span class="text-[var(--press-olive)] font-medium">● PGVECTOR SHARD 04 (ONLINE)</span>
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono-press text-xs">
           <div class="p-3 rounded bg-[var(--press-bg-subtle)] border border-[var(--press-border)]">
@@ -136,30 +300,161 @@
           </div>
           <div class="p-3 rounded bg-[var(--press-bg-subtle)] border border-[var(--press-border)]">
             <div class="text-[10px] text-[var(--press-text-secondary)]">LOSS (EPOCH 12)</div>
-            <div class="text-lg font-bold text-[#788c5d] mt-1">0.0812</div>
+            <div class="text-lg font-bold text-[var(--press-olive)] mt-1">0.0812</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 4: Interactive Buttons & Form Elements -->
+    <!-- Section 4: Interactive Primitives & Buttons -->
     <section class="space-y-4 pb-12">
       <h2 class="text-xl font-serif-press font-semibold">04. Interactive Primitives</h2>
-      <div class="flex flex-wrap items-center gap-3">
-        <button class="bg-[var(--press-primary)] hover:bg-[var(--press-primary-hover)] text-white text-xs font-medium px-4 py-2 rounded-lg transition shadow-xs">
-          Primary Action (Sky Blue)
+      <div class="flex flex-wrap items-center gap-4">
+        <!-- Anthropic Clay Primary Button -->
+        <button class="bg-[var(--press-clay)] hover:bg-[var(--press-clay-hover)] text-white text-xs font-medium px-4 py-2.5 rounded-lg transition shadow-xs">
+          Clay Primary Action
         </button>
-        <button class="bg-[var(--press-text-primary)] hover:opacity-90 text-[var(--press-bg)] text-xs font-medium px-4 py-2 rounded-lg transition">
+        <!-- Sky Blue Button -->
+        <button class="bg-[var(--press-sky)] hover:bg-[var(--press-sky-hover)] text-white text-xs font-medium px-4 py-2.5 rounded-lg transition shadow-xs">
+          Sky Secondary Action
+        </button>
+        <!-- Secondary Ink -->
+        <button class="bg-[var(--press-text-primary)] hover:opacity-90 text-[var(--press-bg)] text-xs font-medium px-4 py-2.5 rounded-lg transition">
           Secondary Ink
         </button>
-        <button class="bg-transparent hover:bg-[var(--press-bg-subtle)] border border-[var(--press-border)] text-xs font-medium px-4 py-2 rounded-lg transition">
+        <!-- Outline Action -->
+        <button class="bg-transparent hover:bg-[var(--press-bg-subtle)] border border-[var(--press-border)] text-xs font-medium px-4 py-2.5 rounded-lg transition">
           Outline Action
         </button>
+        <!-- Status Badges -->
         <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono-press bg-[var(--press-primary-subtle)] text-[var(--press-primary)] border border-[var(--press-primary)]/20">
           <span class="w-1.5 h-1.5 rounded-full bg-[var(--press-primary)]"></span>
           active-tag
         </span>
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono-press bg-[#788c5d]/15 text-[var(--press-olive)] border border-[#788c5d]/25">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--press-olive)]"></span>
+          verified-eval
+        </span>
       </div>
+    </section>
+
+    <!-- Section 5: Anthropic Opus 5.5 BenchmarkGrid Evaluation Matrix -->
+    <section class="space-y-4 pt-4 border-t border-[var(--press-border)]">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-serif-press font-semibold">05. Empirical BenchmarkGrid Matrix</h2>
+        <span class="text-xs font-mono-press text-[var(--press-clay)] font-semibold">Claude Opus 5.5 Spec</span>
+      </div>
+      <p class="text-xs font-serif-press italic text-[var(--press-text-secondary)]">
+        Official comparative evaluation table for LLMs, agentic systems, and high-throughput vector pipelines with winning cells highlighted in Anthropic Peach (<code>#ebc9b7</code>).
+      </p>
+
+      <figure class="press-benchmark-figure">
+        <div class="press-benchmark-wrap">
+          <table class="press-benchmark-table">
+            <thead>
+              <tr>
+                <th scope="col" class="press-benchmark-label-cell" style="background-color: var(--press-bg-subtle);">BENCHMARK SUITE</th>
+                <th scope="col" class="press-benchmark-subject">DentalOS EMPI v2.4</th>
+                <th scope="col">Legacy Fuzzy Match</th>
+                <th scope="col">Elasticsearch Fuzzy</th>
+                <th scope="col">Standard Fellegi-Sunter</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="press-benchmark-label-cell">
+                  <span class="press-benchmark-category">Identity Resolution</span>
+                  <span class="press-benchmark-name">F1 Precision-Recall¹</span>
+                </th>
+                <td class="press-benchmark-win">
+                  <span class="press-benchmark-value">99.4%</span>
+                  <span class="press-benchmark-qualifier">hybrid vector + rules</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">84.2%</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">89.1%</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">93.5%</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="press-benchmark-label-cell">
+                  <span class="press-benchmark-category">Query Latency</span>
+                  <span class="press-benchmark-name">P99 Query Time</span>
+                </th>
+                <td class="press-benchmark-win">
+                  <span class="press-benchmark-value">4.2 ms</span>
+                  <span class="press-benchmark-qualifier">HNSW pgvector shard</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">38.5 ms</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">22.1 ms</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">44.0 ms</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="press-benchmark-label-cell">
+                  <span class="press-benchmark-category">Typo Drift</span>
+                  <span class="press-benchmark-name">Transposition Resilience</span>
+                </th>
+                <td class="press-benchmark-win">
+                  <span class="press-benchmark-value">98.8%</span>
+                  <span class="press-benchmark-qualifier">Jaro-Winkler + Embeddings</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">61.0%</span>
+                </td>
+                <td class="press-benchmark-rival">
+                  <span class="press-benchmark-value">91.4%</span>
+                  <span class="press-benchmark-qualifier">Levenshtein edit-dist 2</span>
+                </td>
+                <td>
+                  <span class="press-benchmark-value">88.2%</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <figcaption class="press-chart-note">
+          <p>
+            Unless otherwise noted, all evaluations were executed on a sharded 4-node PostgreSQL 16 cluster with pgvector 0.7.0.
+          </p>
+          <p>
+            <sup>1</sup><strong>F1 Precision-Recall:</strong> Evaluated against a verified gold standard of 50,000 ambiguous patient records with typographical errors and alias switches.
+          </p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Section 6: Anthropic Peach Testimonial & Case Study Card -->
+    <section class="space-y-4 pt-4 border-t border-[var(--press-border)] pb-12">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-serif-press font-semibold">06. Peach Testimonial &amp; Case Study Card</h2>
+        <span class="text-xs font-mono-press text-[var(--press-text-secondary)]">.press-card-peach</span>
+      </div>
+
+      <article class="press-card-peach">
+        <blockquote>
+          “The transition from fragmented practice databases to a unified DentalOS AI layer reduced our cross-clinic patient duplication rate from 14.8% to under 0.2%. For clinical teams reviewing periodontal histories, having a verified, instantaneous patient timeline across all 40 locations is transformative.”
+        </blockquote>
+        <div class="press-card-peach-split">
+          <div>
+            <div class="font-bold text-xs uppercase tracking-wider opacity-75 font-mono-press">Organization</div>
+            <div class="font-semibold text-sm">PlanetDDS Enterprise Systems</div>
+          </div>
+          <div class="text-right">
+            <div class="font-bold text-xs uppercase tracking-wider opacity-75 font-mono-press">Systems Architect</div>
+            <div class="font-semibold text-sm">Mohammed Ali, AI Software Engineer II</div>
+          </div>
+        </div>
+      </article>
     </section>
 
   </main>

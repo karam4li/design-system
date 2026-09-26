@@ -19,45 +19,58 @@ Most tech companies design interfaces like futuristic video games or glowing das
 2. **The Printed Essay Stance:**
    Long-form reading is prioritized. Prose uses open line-heights ($1.65–1.75$), wide reading margins, and distinguished literary serif typography. It signals contemplative, high-rigor engineering rather than hasty prototyping.
 
-3. **Sky Blue Accents, Never Neon:**
-   The primary visual anchor is **Sky Blue (`#0284c7` / `#38bdf8`)**. Secondary accents are derived from natural pigments: **Sage Green (`#788c5d`)** for nominal states and **Slate Blue (`#6a9bcc`)** for structural metadata. Bright neon pinks, cyans, and purples are forbidden.
+3. **Sky Blue & Anthropic Pigments, Never Neon:**
+   The primary visual anchor is **Sky Blue (`#0284c7` / `#38bdf8`)** combined with authentic Anthropic pigments: **Clay (`#d97757`)**, **Olive / Sage (`#788c5d`)**, and **Slate Blue (`#6a9bcc`)**. Bright neon pinks, cyans, and purples are strictly forbidden.
 
 4. **Universal Cross-Subdomain Continuity:**
-   Every app on every subdomain (`models.*`, `db.*`, `notes.*`, `tools.*`) shares the same **Ecosystem Anchor Bar**, the same **2-Family Typography Standard**, and identical border-radius rhythm. Users immediately know they are inside your unified personal laboratory.
+   Every app on every subdomain (`models.*`, `db.*`, `ktp.*`, `research.*`) shares the same **Ecosystem Navigation Bar**, the same **2-Family Typography Standard**, and identical border-radius rhythm. Users immediately know they are inside your unified personal laboratory.
 
 ---
 
 ## 2. Design Tokens Specification
 
-### A. Color Palette
+### A. Authentic Anthropic Swatch Matrix
 
 #### Base Canvas & Ink
 | Token Name | Hex Code | Role & Usage |
 |---|---|---|
 | `canvas-ivory` | `#faf9f5` | Daytime primary background canvas (warm paper tone, reduces eye fatigue). |
-| `canvas-ivory-alt` | `#f0ede4` | Daytime secondary card surface, code block background, table stripes. |
+| `canvas-ivory-medium` | `#f0eee6` | Daytime dropdown menu surface, code block background, table stripes. |
+| `canvas-ivory-dark` | `#e8e6dc` | Hairline border tone for cards, dividers, and tables in light mode. |
 | `ink-slate` | `#141413` | Nighttime primary background canvas & Daytime primary typography color. |
-| `ink-slate-alt` | `#1c1b19` | Nighttime card surface, elevated modals, code block containers. |
-| `ink-slate-subtle` | `#2b2a26` | Nighttime secondary surface & dark borders. |
+| `ink-slate-medium` | `#3d3d3a` | Nighttime elevated container surface & secondary ink. |
+| `ink-slate-light` | `#5e5d59` | Tertiary typography and subtle metadata. |
 
-#### Accents
+#### Anthropic Warm Earth Pigments
 | Token Name | Hex Code | Role & Usage |
 |---|---|---|
-| `accent-sky` | `#0284c7` | **Primary Brand Signature.** Interactive buttons, active tabs, primary callouts, logo mark. (Night: `#38bdf8`) |
-| `accent-sky-hover` | `#0369a1` | Hover & pressed states for primary buttons and links. (Night: `#7dd3fc`) |
-| `accent-sky-subtle` | `rgba(2, 132, 199, 0.12)` | Subtle badges, tag backgrounds, focused outline rings. |
-| `accent-sage` | `#788c5d` | Success signals, healthy cluster nodes, converged loss metrics, 200 OK. |
-| `accent-blue` | `#6a9bcc` | Informational links, secondary chips, vector dimension tags. |
-| `accent-amber` | `#d4973b` | Warning states, high VRAM usage, cache invalidation alerts. |
-| `accent-crimson` | `#c2534a` | Error states, failed transactions, broken model checkpoints. |
+| `clay` | `#d97757` | **Signature Anthropic CTA.** Used in split combo buttons, featured tags. |
+| `accent` | `#c6613f` | Active hover states for clay elements and high-priority highlights. |
+| `peach` | `#ebc9b7` | Warm badge backgrounds, soft notifications. |
+| `kraft` | `#d4a27f` | Earthy secondary badges, benchmark category tags. |
+| `manilla` | `#ebdbbc` | Paper-textured code chips and archival labels. |
+| `oat` | `#e3dacc` | Pale card backgrounds and editorial callout boxes. |
 
-#### Neutrals & Dividers
+#### Anthropic Natural & Cool Pigments
 | Token Name | Hex Code | Role & Usage |
 |---|---|---|
-| `border-light` | `#e8e6dc` | 1px hairline borders for cards and tables in light mode. |
-| `border-dark` | `#2e2d2a` | 1px hairline borders for cards and tables in dark mode. |
-| `text-muted-light` | `#737168` | Secondary captions, timestamps, and column labels in light mode. |
-| `text-muted-dark` | `#b0aea5` | Secondary captions, timestamps, and column labels in dark mode. |
+| `sky` | `#0284c7` / `#38bdf8` | **Primary Brand Signature.** Primary links, active tabs, telemetry orbs. |
+| `olive` / `sage` | `#788c5d` | Success signals, announcement banner background, verified status. |
+| `cactus` | `#bcd1ca` | Calm status chips, environmental metric cards. |
+| `matcha` | `#ced6bf` | Soft success tags, low latency readouts (< 5ms). |
+| `mineral` | `#629987` | Data pipeline badges, vector database node tags. |
+| `blue` | `#6a9bcc` | Informational links, secondary chips, vector dimension tags. |
+| `cloud` | `#c5d3e0` | Subtle borders, light neutral backdrops. |
+
+#### Anthropic Vibrants & Alerts
+| Token Name | Hex Code | Role & Usage |
+|---|---|---|
+| `coral` | `#ebcece` | Gentle warning chips, notice containers. |
+| `fig` | `#c46686` | Deep berry accent for experimental research notes. |
+| `orchid` | `#e5cada` | Soft purple metadata tag. |
+| `plum` | `#827dbd` | Algorithmic state tags, quantitative indicators. |
+| `poppy` | `#de6262` | Critical error alerts, failed transactions, broken builds. |
+| `pencil` | `#f0ac54` | Squeeze / breakout alerts, pending evaluations. |
 
 ---
 
@@ -85,30 +98,102 @@ Only three typographic roles exist. Never introduce a fourth font family.
 
 1. **Border Radius Scale:**
    * `sm` ($4\text{px}$): Monospace code chips, keyboard badges (`⌘K`), tag pills.
-   * `md` ($8\text{px}$): Action buttons, input fields, dropdown menus.
-   * `xl` ($12\text{px} - 16\text{px}$): Metric cards, research boxes, code containers.
+   * `md` ($8\text{px}$): Action buttons, input fields, combo button halves.
+   * `lg` / `xl` ($12\text{px} - 16\text{px}$): Metric cards, research boxes, code containers, **dropdown panels** ($16\text{px}$).
    * `2xl` ($20\text{px}$): Outer application frames and large modal dialogs.
    * *Avoid fully circular `rounded-full` buttons for primary UI.* Keep buttons gently rectangular (`rounded-lg`).
 
-2. **Depth & Shadows:**
+2. **Depth & Shadows (Anthropic Formula):**
    * Never use heavy, colored, or diffused drop shadows.
+   * Dropdown Shadow: `box-shadow: 0 2px 2px rgba(0,0,0,0.02), 0 4px 6px rgba(0,0,0,0.03), 0 16px 28px rgba(0,0,0,0.06)`.
    * Rely on **1px hairline borders** (`border-light` / `border-dark`) for separation.
-   * Use an ultra-subtle ambient shadow for floating elements:  
-     `box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.02)`.
 
 3. **Spacing Rhythm:**
    * Built strictly on an **$8\text{px}$ base grid** ($4, 8, 12, 16, 24, 32, 48, 64\text{px}$).
 
 ---
 
-## 3. Subdomain Ecosystem Architecture
+## 3. Anthropic Navigation Architecture (`<press-nav>`)
 
-All subdomains must implement the shared **Ecosystem Anchor Bar** across the top:
+The universal navigation component (`ecosystem-nav.js`) implements Anthropic's exact production navigation architecture:
 
 ```
-[ ✸ Karamali // Systems & AI ]  /  [ models.karamali.org ▾ ]         [ research ]  [ db ]  [ api ]  [ ☀️/🌙 ]
++-----------------------------------------------------------------------------------------+
+| [Dispatch] KTP Radar v2.0 Live — UK Global Talent Visa AI Screener →                [✕] |  (44px Banner)
++-----------------------------------------------------------------------------------------+
+| [✸ Mohammed Ali // Systems & AI] [models.karamali.org]                                  |
+|         [Systems ▾]  [Research ▾]  [Ecosystem ▾]  [CV]        [Explore Systems | ▾] [☀️] |  (68px Nav)
++-----------------------------------------------------------------------------------------+
 ```
 
-* **Left Anchor:** Your persistent personal monogram/symbol (`✸` sunburst or custom glyph) linking directly back to the root apex domain (`https://karamali.org`).
-* **Subdomain Indicator:** A subtle rounded pill indicating the active subdomain (`models`, `db`, `research`, `cv`, `tools`). Clicking it reveals a dropdown of all running subdomains.
-* **Right Group:** Direct cross-links to sibling subdomains and the universal Light/Dark theme toggle.
+### Architectural Key Features:
+1. **Top Announcement Banner:**
+   * Dimensions: Height $44\text{px}$ (`2.75rem`), background `--press-olive` (`#788c5d`).
+   * Attributes: `banner="Notice text"`, `banner-url="URL"`, dismissible with `sessionStorage` state caching.
+2. **Main Bar Dimensions:**
+   * Dimensions: Height $68\text{px}$ (`4.25rem`), sticky position, backdrop blur $14\text{px}$, hairline bottom border.
+3. **Categorised Multi-Column Dropdown Menus:**
+   * Triggered on hover/focus with smooth $180^\circ$ caret rotation.
+   * Two-column grid with uppercase mono headers (`CORE PLATFORMS`, `PIPELINES & AUTOMATION`, `SCIENTIFIC FOCUS`).
+   * Links include authentic Anthropic external linkout icons (`↗`).
+4. **Split Combo Action Button (`.press-combo-btn`):**
+   * Primary action button (`border-radius: 8px 0 0 8px`) in Anthropic Clay `#d97757`.
+   * Secondary trigger caret (`border-radius: 0 8px 8px 0`) opening instant shortcut drawer.
+5. **Anthropic Asymmetrical Animated Hamburger:**
+   * Top line: $1.5\text{rem}$, middle line: $1.5\text{rem}$, bottom line: $1.0\text{rem}$ (Anthropic's signature asymmetric detail).
+   * Animates smoothly into an "✕" on toggle, triggering the mobile drawer.
+6. **Dark / Light Mode Controller:**
+   * Instant SVG icon flip with persistent `localStorage` synchronization across all subdomains.
+
+---
+
+## 4. The Empirical Release Standard (Claude Opus 5.5 Architecture)
+
+Derived from Anthropic's flagship release architecture (`anthropic.com/claude-opus-5-5`), this specification governs model launches, quantitative research evaluations, and system monographs.
+
+### A. The Letterpress Ink-Bleed SVG Filter (`#press-ink-bleed`)
+
+Anthropic achieves their printed-paper aesthetic on digital displays using an inline SVG filter that simulates physical ink absorption, fiber micro-roughness, and letterpress edge dispersion:
+
+```html
+<svg class="press-filters" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+  <defs>
+    <filter id="press-ink-bleed" x="-4%" y="-15%" width="108%" height="130%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n" />
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="0.6" xChannelSelector="R" yChannelSelector="G" result="rough" />
+      <feGaussianBlur in="rough" stdDeviation="0.7" result="soft" />
+      <feComponentTransfer in="soft" result="ink"><feFuncA type="linear" slope="1.14" intercept="0" /></feComponentTransfer>
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="12" result="s" />
+      <feColorMatrix in="s" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -8 0 0 0 6.6" result="holes" />
+      <feComposite in="ink" in2="holes" operator="in" />
+    </filter>
+  </defs>
+</svg>
+```
+*Apply with class `.press-ink-bleed` on large serif display headings.*
+
+### B. The BenchmarkGrid Specification
+
+The official comparative evaluation table for LLMs, agentic pipelines, and database throughput:
+
+* **Grid Frame:** 1px hairline border in `var(--press-border)`.
+* **Pinned Subject Column:** Evaluated system/model column has a 3px top highlight border (`--grid-subject-edge`) in Clay (`#d97757`) or Olive (`#788c5d`).
+* **Winning Metric Highlight (`.press-benchmark-win`):**
+  * **Peach Theme:** Background `#ebc9b7` with dark bold text (Anthropic Opus 5.5 default).
+  * **Matcha Theme:** Background `#ced6bf` for environmental, biomedical, or data throughput metrics.
+* **Rival Win Cell (`.press-benchmark-rival`):** Subtle neutral background `#f0ede4` / `#262522`.
+* **Cell Architecture:** Height $68\text{px}$, padding $10\text{px}\ 14\text{px}$, numbers in tabular monospace font, qualifiers (`with tools`, `0-shot`, `partial`) set in small $11\text{px}$ sans below the value.
+* **Scholarly Chart Notes (`.press-chart-note`):** Methodological footnotes, standard error margins ($\pm 2.6\text{ pts}$), temperature parameters, and harness configurations set in clean $12\text{px}$ muted typography.
+
+### C. Side-by-Side Model Comparison Matrix
+
+* Tabbed switcher for problem categories (`Bug Diagnostics`, `Thread Synthesis`, `System Refactor`).
+* Model comparison cards contrasting baseline versions against foundational models.
+* Code scrollers with syntax token styling and token generation speed tags (`160 tok/s`).
+
+### D. Peach Testimonial & Case Study Cards
+
+* Grounded in warm Anthropic Peach (`#ebc9b7`) or Ivory Light.
+* Literary quote set in Newsreader Serif italic ($19\text{px}$, line-height $1.6$).
+* Bottom split bar displaying Organization name, Evaluator name, and engineering title.
+
