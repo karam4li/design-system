@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Quiet Press — Living Style Guide</title>
+  <link rel="stylesheet" href="./tokens/variables.css">
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <script src="./components/ecosystem-nav.js"></script>
+  <style>
+    body {
+      background-color: var(--press-bg);
+      color: var(--press-text-primary);
+      font-family: var(--press-font-sans);
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .font-serif-press { font-family: var(--press-font-serif); }
+    .font-mono-press { font-family: var(--press-font-mono); }
+    .press-card {
+      background-color: var(--press-bg-card);
+      border: 1px solid var(--press-border);
+      border-radius: var(--press-radius-lg);
+    }
+  </style>
+</head>
+<body class="min-h-screen antialiased">
+
+  <!-- Universal Navigation Component Demonstration -->
+  <press-nav active="design" domain="ali.net"></press-nav>
+
+  <main class="max-w-4xl mx-auto p-6 md:p-12 space-y-12">
+    
+    <!-- Hero / Intro -->
+    <header class="space-y-3 pb-8 border-b border-[var(--press-border)]">
+      <div class="inline-flex items-center gap-2 text-xs font-mono-press uppercase tracking-wider text-[var(--press-clay)] font-semibold">
+        <span>Component Specification</span>
+        <span>•</span>
+        <span>Version 1.0.0</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-serif-press font-semibold tracking-tight">
+        The Quiet Press Design System
+      </h1>
+      <p class="font-serif-press italic text-xl text-[var(--press-text-secondary)] leading-relaxed">
+        A calm, literary design system crafted for data scientists, backend architects, and machine learning researchers.
+      </p>
+    </header>
+
+    <!-- Section 1: Color Swatches -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-serif-press font-semibold">01. Foundational Palettes</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3 text-xs font-mono-press">
+        <div class="p-3 press-card">
+          <div class="w-full h-8 rounded bg-[#faf9f5] border border-[#e8e6dc] mb-2"></div>
+          <div class="font-bold">Ivory Cream</div>
+          <div class="text-[var(--press-text-secondary)] text-[10px]">#faf9f5</div>
+        </div>
+        <div class="p-3 press-card">
+          <div class="w-full h-8 rounded bg-[#141413] mb-2"></div>
+          <div class="font-bold">Slate Ink</div>
+          <div class="text-[var(--press-text-secondary)] text-[10px]">#141413</div>
+        </div>
+        <div class="p-3 press-card">
+          <div class="w-full h-8 rounded bg-[#d97757] mb-2"></div>
+          <div class="font-bold">Clay (Brand)</div>
+          <div class="text-[var(--press-text-secondary)] text-[10px]">#d97757</div>
+        </div>
+        <div class="p-3 press-card">
+          <div class="w-full h-8 rounded bg-[#788c5d] mb-2"></div>
+          <div class="font-bold">Sage Green</div>
+          <div class="text-[var(--press-text-secondary)] text-[10px]">#788c5d</div>
+        </div>
+        <div class="p-3 press-card">
+          <div class="w-full h-8 rounded bg-[#6a9bcc] mb-2"></div>
+          <div class="font-bold">Slate Blue</div>
+          <div class="text-[var(--press-text-secondary)] text-[10px]">#6a9bcc</div>
+        </div>
+        <div class="p-3 press-card">
+          <div class="w-full h-8 rounded bg-[#d4973b] mb-2"></div>
+          <div class="font-bold">Amber Warning</div>
+          <div class="text-[var(--press-text-secondary)] text-[10px]">#d4973b</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Typography & Prose -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-serif-press font-semibold">02. Typographic Scale &amp; Prose Rhythm</h2>
+      <div class="press-card p-6 md:p-8 space-y-4">
+        <h3 class="text-2xl font-serif-press font-normal">
+          Section Header in Newsreader / Tiempos Serif
+        </h3>
+        <p class="font-serif-press text-lg leading-relaxed text-[var(--press-text-secondary)] max-w-2xl">
+          Body copy adheres to a strict 1.7 line-height budget. Notice the calm contrast against the background surface. Quotations and marginalia are set with subtle left borders rather than floating bubbles.
+        </p>
+        <div class="border-l-2 border-[var(--press-clay)] pl-4 py-1 italic font-serif-press text-[var(--press-text-primary)]">
+          "The greatest value of a picture is when it forces us to notice what we never expected to see." — John Tukey
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Engineering Telemetry Cards -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-serif-press font-semibold">03. Systems &amp; Benchmark Cards</h2>
+      <div class="press-card p-6 space-y-4">
+        <div class="flex justify-between items-center text-xs font-mono-press pb-3 border-b border-[var(--press-border)]">
+          <span class="font-bold">CLUSTER REPLICA TELEMETRY</span>
+          <span class="text-[#788c5d]">● PGVECTOR SHARD 04 (ONLINE)</span>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 font-mono-press text-xs">
+          <div class="p-3 rounded bg-[var(--press-bg-subtle)] border border-[var(--press-border)]">
+            <div class="text-[10px] text-[var(--press-text-secondary)]">P99 LATENCY</div>
+            <div class="text-lg font-bold text-[var(--press-clay)] mt-1">4.2 ms</div>
+          </div>
+          <div class="p-3 rounded bg-[var(--press-bg-subtle)] border border-[var(--press-border)]">
+            <div class="text-[10px] text-[var(--press-text-secondary)]">ACTIVE QUERIES</div>
+            <div class="text-lg font-bold mt-1">1,820 /s</div>
+          </div>
+          <div class="p-3 rounded bg-[var(--press-bg-subtle)] border border-[var(--press-border)]">
+            <div class="text-[10px] text-[var(--press-text-secondary)]">HNSW MEMORY</div>
+            <div class="text-lg font-bold mt-1">2.4 GB</div>
+          </div>
+          <div class="p-3 rounded bg-[var(--press-bg-subtle)] border border-[var(--press-border)]">
+            <div class="text-[10px] text-[var(--press-text-secondary)]">LOSS (EPOCH 12)</div>
+            <div class="text-lg font-bold text-[#788c5d] mt-1">0.0812</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Interactive Buttons & Form Elements -->
+    <section class="space-y-4 pb-12">
+      <h2 class="text-xl font-serif-press font-semibold">04. Interactive Primitives</h2>
+      <div class="flex flex-wrap items-center gap-3">
+        <button class="bg-[var(--press-clay)] hover:bg-[var(--press-clay-hover)] text-white text-xs font-medium px-4 py-2 rounded-lg transition shadow-xs">
+          Primary Action (Clay)
+        </button>
+        <button class="bg-[var(--press-text-primary)] hover:opacity-90 text-[var(--press-bg)] text-xs font-medium px-4 py-2 rounded-lg transition">
+          Secondary Ink
+        </button>
+        <button class="bg-transparent hover:bg-[var(--press-bg-subtle)] border border-[var(--press-border)] text-xs font-medium px-4 py-2 rounded-lg transition">
+          Outline Action
+        </button>
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono-press bg-[var(--press-clay-subtle)] text-[var(--press-clay)] border border-[var(--press-clay)]/20">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--press-clay)]"></span>
+          active-tag
+        </span>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
